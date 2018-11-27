@@ -4,7 +4,7 @@
 using namespace std;
 
 int sum(int n);
-
+int product(int n);
 int main(){
 
   int n;
@@ -14,7 +14,11 @@ int main(){
 
   int s = sum(n);
 
+  int m = product(n);
+  
   cout << "The sum is: " << s << endl;
+
+  cout << "Tehe product is: " << m << endl;
   
   return 0;
 }
@@ -27,4 +31,14 @@ int sum(int n){
     s = s + i;
 
   return s;
+}
+
+int product(int n){
+
+  int p = 1;
+
+  for(int i = 1; i <= n; i++)
+    p = p * i;
+
+  return p;
 }
